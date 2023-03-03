@@ -107,8 +107,7 @@ onLoadMoreBtnClick = () => {
   
 
   render() {
-   const errorMessage = toast.error("No images found by request")
-   
+
     const { showModal, isLoad, images, errorOfSerch, modalData } = this.state;
 
     return (
@@ -116,13 +115,13 @@ onLoadMoreBtnClick = () => {
         <Searchbar onHandleSubmit={this.onHandleSubmit} />
       <ImageGallery  images={images} onSelect={this.onSelect}></ImageGallery>
         {showModal && <Modal closeModal={this.closeModal} onModalClick={this.toggleModal} data={modalData} />}
-        {errorOfSerch && errorMessage }
+        
         {isLoad ?
           <Loader /> :
           images.length > 0 &&
           <ButtonLoad onClick={this.onLoadMoreBtnClick}>Load</ButtonLoad> 
         }
-        <ToastContainer />
+        <ToastContainer autoClose={2000}/>
     </APP>
   );
   }
