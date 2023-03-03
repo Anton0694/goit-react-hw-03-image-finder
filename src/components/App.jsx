@@ -90,7 +90,7 @@ onLoadMoreBtnClick = () => {
 
     this.setState({
       modalData: data,
-      isModal: true
+      showModal: true
     })
   }
    
@@ -107,10 +107,8 @@ onLoadMoreBtnClick = () => {
   
 
   render() {
-    const errorMessage = toast.error("No images found by request")
-    setTimeout(() => {errorMessage}, 1000);
-
-
+   const errorMessage = toast.error("No images found by request")
+   
     const { showModal, isLoad, images, errorOfSerch, modalData } = this.state;
 
     return (

@@ -15,7 +15,8 @@ export class Searchbar extends Component {
                 <Form onSubmit={this.props.onHandleSubmit}>
                     
                 <SearchFormBtn type="submit">
-                    <IconSearch size='2em' />
+                        <IconSearch size='2em' />
+                        
                 </SearchFormBtn>
 
                     <SearchFormInput
