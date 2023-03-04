@@ -16,7 +16,7 @@ export class App extends Component {
     images: [],
     page: 1,
     isLoad: false,
-    errorOfSerch: false,
+    
     error: false,
     showModal: false,
     modalData: '',
@@ -108,7 +108,7 @@ onLoadMoreBtnClick = () => {
 
   render() {
 
-    const { showModal, isLoad, images, errorOfSerch, modalData } = this.state;
+    const { showModal, isLoad, images, modalData } = this.state;
 
     return (
     <APP>
