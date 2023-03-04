@@ -44,7 +44,7 @@ export class App extends Component {
        getGallery(searchText, page)
         .then(({ data }) => {
           if (data.hits.length === 0) {
-            this.setState({ erorOfSerch: true })
+           
           } this.setState({ images: data.hits })
 
         }).finally(this.setState({ isLoad: false }))
